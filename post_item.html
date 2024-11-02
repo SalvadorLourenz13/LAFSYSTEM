@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>POst Item</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h2>Post an Item</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="text" name="category" placeholder="Category" required>
+        <input type="text" name="name" placeholder="Owner/Founder Name" required>
+        <select name="department">
+            <option value="SAS">SAS</option>
+            <option value="CBM">CBM</option>
+            <option value="CCSICT">CCSICT</option>
+            <option value="POLYTECHNIC">POLYTECHNIC</option>
+            <option value="CRIMINOLOGY">CRIMINOLOGY</option>
+            <option value="EDUC">EDUC</option>
+            <option value="AGRICULTURE">AGRICULTURE</option>
+        </select>
+        <input type="text" name="title" placeholder="Description" required>
+        <input type="file" name="image" required>
+        <input type="submit" value="Submit">
+    </form>
+    {% endblock %}
+
+</body>
+</html>

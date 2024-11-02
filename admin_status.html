@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Admin Status</title>
+</head>
+<body>
+    {% extends 'admin_dashboard.html' %}
+    {% block content %}
+    <h3>Claimed or Unclaimed Items</h3>
+    <div class="items">
+        {% for item in items %}
+        <div class="item">
+            <h4>{{ item.title }}</h4>
+            <p>Category: {{ item.category }}</p>
+            <p>Owner/Founder: {{ item.name }}</p>
+            <p>Department: {{ item.department }}</p>
+            <p>Date Posted: {{ item.date_posted }}</p>
+            <p>Status: {{ item.claimed }}</p>
+            <img src="{{ url_for('static', filename='images/' + item.image_path) }}" alt="{{ item.title }}">
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+
+</body>
+</html>

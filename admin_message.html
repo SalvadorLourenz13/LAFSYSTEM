@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Admin Message</title>
+</head>
+<body>
+    {% extends 'admin_dashboard.html' %}
+    {% block content %}
+    <h3>User Messages</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Message</th>
+                <th>Date Sent</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+            <tr>
+                <td>{{ message.fullname }}</td>
+                <td>{{ message.email }}</td>
+                <td>{{ message.contact_no }}</td>
+                <td>{{ message.message }}</td>
+                <td>{{ message.date_sent }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h2>Admin Dashboard</h2>
+    <nav>
+        <button onclick="location.href='admin_items.html'">Dashboard</button>
+        <button onclick="location.href='admin_status.html'">Status</button>
+        <button onclick="location.href='admin_message.html'">Messages</button>
+        <a href="{{ url_for('admin_logout') }}" class="logout-button">Logout</a>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

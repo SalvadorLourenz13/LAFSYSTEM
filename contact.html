@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h2>Our Contact Information</h2>
+    <p>Our Main Office is Located at: SBO</p>
+    <p>Email us: CYNLAF@gmail.com</p>
+    <p>Mobile #: 0930928840</p>
+    <h3>Send us a Message</h3>
+    <form method="POST">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="contact_no" placeholder="Contact No." required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+    {% endblock %}
+
+</body>
+</html>
